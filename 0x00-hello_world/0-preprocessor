@@ -1,0 +1,6 @@
+#!/bin/bash
+gcc -E "$CFILE" -o c
+export CFILE=main.c
+chmod +x 0-preprocessor
+gcc -E "$CFILE" -o c
+chmod +x 0-preprocessor
