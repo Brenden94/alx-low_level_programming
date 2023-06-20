@@ -1,1 +1,39 @@
-#include <unistd.h>\n\n/**\n * putchar_digit - Helper function to print a digit using putchar\n * @n: The digit to be printed\n */\nvoid putchar_digit(int n)\n{\n\tchar digit = n + '0';\n\twrite(1, &digit, 1);\n}\n\n/**\n * print_combinations - Prints all possible combinations of two digits\n */\nvoid print_combinations(void)\n{\n\tint i, j;\n\n\tfor (i = 0; i <= 8; i++)\n\t{\n\t\tfor (j = i + 1; j <= 9; j++)\n\t\t{\n\t\t\tputchar_digit(i);\n\t\t\tputchar_digit(j);\n\n\t\t\tif (!(i == 8 && j == 9))\n\t\t\t{\n\t\t\t\tputchar(,);\n\t\t\t\tputchar( );\n\t\t\t}\n\t\t}\n\t}\n}\n\n/**\n * main - Entry point\n *\n * Return: Always 0 (Success)\n */\nint main(void)\n{\n\tprint_combinations();\n\treturn (0);\n}
+#include <unistd.h>
+
+int putchar_errcheck(char c)
+{
+    if (write(1, &c, 1) == -1)
+        return -1;
+    return 1;
+}
+
+void print_combinations(void)
+{
+    int i, j, k;
+
+    for (i = 0; i <= 7; i++)
+    {
+        for (j = i + 1; j <= 8; j++)
+        {
+            for (k = j + 1; k <= 9; k++)
+            {
+                putchar_errcheck((i % 10) + '0');
+                putchar_errcheck((j % 10) + '0');
+                putchar_errcheck((k % 10) + '0');
+
+                if (!(i == 7 && j == 8 && k == 9))
+                {
+                    putchar_errcheck('.');
+                }
+            }
+        }
+    }
+
+    putchar_errcheck('\n');
+}
+
+int main(void)
+{
+    print_combinations();
+    return 0;
+}
