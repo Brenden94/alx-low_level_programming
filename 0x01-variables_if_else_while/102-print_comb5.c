@@ -1,52 +1,34 @@
-#include <unistd.h>
-
-#define COMMA_SPACE putchar_errcheck(44), putchar_errcheck(32)
-
-/**
- * putchar_errcheck - Writes a character to the standard output
- * @c: The character to be written
- *
- * Return: On success, 1. On error, -1 is returned.
- */
-int putchar_errcheck(int c)
-{
-return (write(1, &c, 1) == -1 ? -1 : 1);
-}
+#include <stdio.h>
 
 /**
  * main - Prints all possible combinations of two two-digit numbers
  *
- * Description: This program prints all possible combinations of two two-digit
- * numbers. The numbers range from 0 to 99 and are separated by a space. All
- * numbers are printed with two digits. The combinations are separated by a
- * comma and a space. The program uses only eight calls to putchar_errcheck.
- *
- * Return: 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int num1, num2;
+    int i, j;
 
-for (num1 = 0; num1 <= 98; num1++)
-{
-for (num2 = num1 + 1; num2 <= 99; num2++)
-{
-putchar_errcheck((num1 / 10) + 0);
-putchar_errcheck((num1 % 10) + 0);
-putchar_errcheck( );
-putchar_errcheck((num2 / 10) + 0);
-putchar_errcheck((num2 % 10) + 0);
+    for (i = 0; i < 100; i++)
+    {
+        for (j = 0; j < 100; j++)
+        {
+            if (i < j)
+            {
+                putchar((i / 10) + '0');
+                putchar((i % 10) + '0');
+                putchar(' ');
+                putchar((j / 10) + '0');
+                putchar((j % 10) + '0');
+                if (i != 98 || j != 99)
+                {
+                    putchar(,);
+                    putchar(' ');
+                }
+            }
+        }
+    }
 
-if (!(num1 == 98 && num2 == 99))
-{
-COMMA_SPACE;
-}
-else
-{
-putchar_errcheck(n);
-}
-}
-}
-
-return (0);
+    putchar('\n');
+    return (0);
 }
