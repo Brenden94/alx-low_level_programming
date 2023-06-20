@@ -10,7 +10,7 @@
  */
 int putchar_errcheck(int c)
 {
-    return (write(1, &c, 1) == -1 ? -1 : 1);
+return (write(1, &c, 1) == -1 ? -1 : 1);
 }
 
 /**
@@ -24,24 +24,24 @@ int putchar_errcheck(int c)
  */
 int main(void)
 {
-    int num1, num2;
+int num1, num2;
 
-    for (num1 = 0; num1 <= 98; num1++)
-    {
-        for (num2 = num1 + 1; num2 <= 99; num2++)
-        {
-            putchar_errcheck((num1 / 10) + 0);
-            putchar_errcheck((num1 % 10) + 0);
-            putchar_errcheck(32);
-            putchar_errcheck((num2 / 10) + 0);
-            putchar_errcheck((num2 % 10) + 0);
+for (num1 = 0; num1 <= 98; num1++)
+{
+for (num2 = num1 + 1; num2 <= 99; num2++)
+{
+putchar_errcheck((num1 / 10) + 0);
+putchar_errcheck((num1 % 10) + 0);
+putchar_errcheck(32);
+putchar_errcheck((num2 / 10) + 0);
+putchar_errcheck((num2 % 10) + 0);
 
-            if (!(num1 == 98 && num2 == 99))
-                COMMA_SPACE;
-        }
-    }
+if (!(num1 == 98 && num2 == 99))
+COMMA_SPACE;
+}
+}
 
-    putchar_errcheck(10);
+putchar_errcheck(10);
 
-    return (0);
+return (0);
 }
