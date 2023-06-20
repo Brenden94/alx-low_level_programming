@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -10,14 +10,7 @@
  */
 int main(void)
 {
-    int number;
+write(1, "0123456789\n", 11);
 
-    for (number = 0; number < 10; number++)
-    {
-        putchar(number + '0');
-    }
-
-    putchar('n\);
-
-    return (0);
+return (0);
 }
