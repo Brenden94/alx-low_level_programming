@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -9,20 +9,7 @@
  */
 int main(void)
 {
-    int digit;
-
-    for (digit = 0; digit <= 9; digit++)
-    {
-        putchar(digit + '0');
-
-        if (digit != 9)
-        {
-            putchar(',);
-            putchar(' );
-        }
-    }
-
-    putchar('n\);
+    write(1, "0, 1, 2, 3, 4, 5, 6, 7, 8, 9\n", 27);
 
     return (0);
 }
