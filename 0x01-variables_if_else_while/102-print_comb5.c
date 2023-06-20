@@ -10,17 +10,18 @@
  */
 int putchar_errcheck(int c)
 {
-return (write(1, &c, 1) == -1 ? -1 : 1);
+return (write(1, (void *)&c, 1) == -1 ? -1 : 1);
 }
 
 /**
- * print_combinations - Prints all possible combinations of two two-digit numbers
+ * main - Prints all possible combinations of two two-digit numbers
  *
- * Description: This function prints all possible combinations of two two-digit
+ * Description: This program prints all possible combinations of two two-digit
  * numbers. The numbers range from 0 to 99 and are separated by a space. All
  * numbers are printed with two digits. The combinations are separated by a
  * comma and a space. The program uses only eight calls to putchar_errcheck.
- * All code is contained within the main function.
+ *
+ * Return: 0 (Success)
  */
 int main(void)
 {
