@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-#define COMMA_SPACE putchar_errcheck(44), putchar_errcheck(32)
+#define COMMA_SPACE putchar_errcheck(44); putchar_errcheck(32)
 
 /**
  * putchar_errcheck - Writes a character to the standard output
@@ -10,7 +10,7 @@
  */
 int putchar_errcheck(int c)
 {
-return (write(1, (void *)&c, 1) == -1 ? -1 : 1);
+return (write(1, &c, 1) == -1 ? -1 : 1);
 }
 
 /**
