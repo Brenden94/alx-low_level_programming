@@ -38,11 +38,15 @@ putchar_errcheck((num2 / 10) + 48);
 putchar_errcheck((num2 % 10) + 48);
 
 if (!(num1 == 98 && num2 == 99))
+{
 COMMA_SPACE;
 }
-}
-
+else
+{
 putchar_errcheck(10);
+}
+}
+}
 
 return (0);
 }
