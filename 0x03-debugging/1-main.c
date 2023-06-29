@@ -1,24 +1,21 @@
 #include <stdio.h>
+#include "main.h"
 
 int main(void)
 {
-	int i;
+    int month;
+    int day;
+    int year;
 
-	printf("Infinite loop incoming :(
-");
+    month = 4;
+    day = 1;
+    year = 1997;
 
-	i = 0;
+    printf("Date: %02d/%02d/%04d\n", month, day, year);
 
-	/* Commented out the infinite loop */
-	/*
-	while (i < 10)
-	{
-		putchar(i);
-	}
-	*/
+    day = convert_day(month, day);
 
-	printf("Infinite loop avoided! \o/
-");
+    print_remaining_days(month, day, year);
 
-	return (0);
+    return (0);
 }
