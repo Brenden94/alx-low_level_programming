@@ -3,17 +3,9 @@
 int main(void)
 {
     char *str1 = "Holberton!";
-    char *str2 = "Lorem ipsum...";
-    char *str3 = "";
 
     _puts("str = \"Holberton!\";"); // regular string
     _puts(str1);
-
-    _puts("str = \"Lorem ipsum...\";"); // long string
-    _puts(str2);
-
-    _puts("str = \"\";"); // empty string
-    _puts(str3);
 
     return (0);
 }
