@@ -2,26 +2,18 @@
 
 int main(void)
 {
-    int a = 98;
-    int b = 42;
+    char *str1 = "Holberton!";
+    char *str2 = "Lorem ipsum...";
+    char *str3 = "";
 
-    printf("a = %d; b = %d;\n", a, b);
-    swap_int(&a, &b);
-    printf("a = %d; b = %d;\n", a, b);
+    _puts("str = \"Holberton!\";"); // regular string
+    _puts(str1);
 
-    a = 1024;
-    b = -4096;
+    _puts("str = \"Lorem ipsum...\";"); // long string
+    _puts(str2);
 
-    printf("a = %d; b = %d;\n", a, b);
-    swap_int(&a, &b);
-    printf("a = %d; b = %d;\n", a, b);
-
-    a = INT_MAX;
-    b = INT_MIN;
-
-    printf("a = %d; b = %d;\n", a, b);
-    swap_int(&a, &b);
-    printf("a = %d; b = %d;\n", a, b);
+    _puts("str = \"\";"); // empty string
+    _puts(str3);
 
     return (0);
 }

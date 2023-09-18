@@ -1,9 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
+#include <unistd.h>
 
-void swap_int(int *a, int *b);
+int _putchar(char c);
+void _puts(char *str);
 
 #endif /* MAIN_H */
 
