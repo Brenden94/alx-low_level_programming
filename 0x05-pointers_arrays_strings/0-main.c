@@ -1,34 +1,22 @@
 #include "main.h"
+#include <stdio.h>
+#include <stddef.h>
 
-
-/*
+/**
  * main - Entry point
  *
- * Description: Prints the value of n before and after calling reset_to_98
- * Return: Always 0
+ * Description: A simple program that demonstrates the reset_to_98 function.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+    int n;
 
-	n = 402;
-	_putchar('n\);
-	_putchar('=\);
-	_putchar('4\);
-	_putchar('0\);
-	_putchar('2\);
-	_putchar('
-\);
-
-	reset_to_98(&n);
-
-	_putchar('n\);
-	_putchar('=\);
-	_putchar((n / 100) + '0');
-	_putchar(((n / 10) % 10) + '0');
-	_putchar((n % 10) + '0');
-	_putchar('
-\);
-
-	return (0);
+    n = 402;
+    printf("n=%d\n", n);
+    reset_to_98(&n);
+    printf("n=%d\n", n);
+    return (0);
 }
+
