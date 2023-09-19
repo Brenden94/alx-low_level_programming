@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -10,6 +11,6 @@ int main(void)
     char *str;
 
     str = ""; // Empty string
-    print_rev(str);
+    printf("%s\n", str);
     return (0);
 }
