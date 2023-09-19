@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h> // Include the standard I/O library
+#include <stdio.h> /* Include the standard I/O library */
 
 /**
  * print_array - Prints n elements of an array of integers.
@@ -8,14 +8,14 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
+    int i;
 
-	for (i = 0; i < n; i++)
-	{
-		printf("%d", a[i]);
+    for (i = 0; i < n; i++)
+    {
+        printf("%d", a[i]);
 
-		if (i < n - 1) // Add a comma and space for all elements except the last one
-			printf(", ");
-	}
-	printf("\n");
+        if (i < n - 1) // Add a comma and space for all elements except the last one
+            printf(", ");
+    }
+    printf("\n");
 }
