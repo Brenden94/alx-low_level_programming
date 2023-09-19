@@ -1,30 +1,24 @@
 #include "main.h"
 
 /**
- * _print_rev - Prints a string in reverse to stdout.
- * @str: The input string to be printed in reverse.
- *
- * Description: This function prints each character of the input string in
- * reverse order to standard output (stdout).
+ * print_rev - Prints a string in reverse, followed by a new line.
+ * @s: The string to be printed in reverse.
  */
-void _print_rev(char *str)
+void print_rev(char *s)
 {
-if (str != NULL)
-{
-int length = 0;
-int i;
+    int i = 0;
 
-/* Calculate the length of the string */
-while (str[length] != '\0')
-{
-length++;
-}
+    while (s[i] != '\0')
+    {
+        i++;
+    }
 
-/* Print the string in reverse order */
-for (i = length - 1; i >= 0; i--)
-{
-_putchar(str[i]);
-}
-}
+    while (i > 0)
+    {
+        i--;
+        _putchar(s[i]);
+    }
+
+    _putchar(n);
 }
 
