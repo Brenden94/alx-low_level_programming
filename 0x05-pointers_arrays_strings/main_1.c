@@ -10,7 +10,8 @@ int main(void)
 {
     char *str;
 
-    str = "Lorem ipsum"; // Long string
-    printf("%s\n", str);
+    str = "Lorem ipsum";
+    printf("str = \"%s\"\n", str);
+
     return (0);
 }

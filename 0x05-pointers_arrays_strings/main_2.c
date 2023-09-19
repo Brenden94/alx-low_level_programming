@@ -10,7 +10,8 @@ int main(void)
 {
     char *str;
 
-    str = ""; // Empty string
-    printf("%s\n", str);
+    str = "";
+    printf("str = \"%s\"\n", str);
+
     return (0);
 }
