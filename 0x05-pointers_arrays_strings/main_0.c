@@ -10,13 +10,13 @@ int main(void)
 {
     char *str;
 
-    str = "Holberton!"; // Regular string
+    str = "Holberton!";
     printf("str = \"%s\"\n", str);
 
-    str = "Lorem ipsum"; // Long string
+    str = "Lorem ipsum";
     printf("str = \"%s\"\n", str);
 
-    str = ""; // Empty string
+    str = "";
     printf("str = \"%s\"\n", str);
 
     return (0);
