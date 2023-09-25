@@ -17,7 +17,7 @@ char *_strcpy(char *dest, char *src)
         i++;
     }
 
-    dest[i] = 0; // Null-terminate the destination string
+    dest[i] = 0; /* Null-terminate the destination string */
 
     return dest;
 }
