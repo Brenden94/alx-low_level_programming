@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdio.h> /* Include the standard I/O library */
+#include <stdio.h>
 
 /**
  * print_array - Prints n elements of an array of integers.
- * @a: Pointer to the array of integers.
- * @n: Number of elements to print.
+ * @a: The array of integers.
+ * @n: The number of elements to print.
  */
 void print_array(int *a, int n)
 {
@@ -13,9 +13,10 @@ void print_array(int *a, int n)
     for (i = 0; i < n; i++)
     {
         printf("%d", a[i]);
-
-        if (i < n - 1) // Add a comma and space for all elements except the last one
-            printf(", ");
+        if (i < n - 1)
+        {
+            printf(", "); /* Add a comma and space for all elements except the last one */
+        }
     }
     printf("\n");
 }
