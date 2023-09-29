@@ -1,10 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototype for _putchar */
-int _putchar(char c);
+#include <stdio.h>
 
-/* Function prototype for _print_rev_recursion */
-void _print_rev_recursion(char *s);
+int factorial(int n);
 
 #endif /* MAIN_H */
