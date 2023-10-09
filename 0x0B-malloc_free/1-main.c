@@ -1,22 +1,17 @@
 #include <stdio.h>
-#include "str_concat.h"
+#include <stdlib.h>
 
-int main(void)
-{
-    char s1[] = "Hello, ";
-    char s2[] = "world!";
-    char *result;
+char **strtow(char *str);
 
-    result = str_concat(s1, s2);
-    if (result == NULL)
-    {
-        printf("Failed to concatenate strings\n");
-        return (1);
+int main(void) {
+    char **av;
+    int i;
+
+    av = strtow("      Holberton School         #cisfun      ");
+    for (i = 0; av[i]; i++) {
+        printf("%s\n", av[i]);
+        free(av[i]);
     }
-
-    printf("%s\n", result);
-
-    free(result); // Don't forget to free the allocated memory
-
+    free(av);
     return (0);
 }
