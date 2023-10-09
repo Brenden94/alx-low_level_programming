@@ -16,7 +16,4 @@ int main(void)
 
     printf("%s\n", result);
 
-    free(result); // Don't forget to free the allocated memory
-
-    return (0);
 }
