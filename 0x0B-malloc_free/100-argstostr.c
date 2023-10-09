@@ -30,10 +30,10 @@ char *argstostr(int ac, char **av) {
         for (j = 0; av[i][j]; j++) {
             str[k++] = av[i][j];
         }
-        str[k++] = n;  /* Use n to represent newline character */
+        str[k++] = '\n';  /* Use '\n' to represent newline character */
     }
 
-    str[k] = 0;
+    str[k] = '\0';
 
     return (str);
 }
