@@ -10,7 +10,7 @@ char *argstostr(int ac, char **av) {
     for (i = 0; i < ac; i++) {
         for (j = 0; av[i][j]; j++)
             len++;
-        len++;
+        len++;  // Account for the newline character
     }
 
     str = malloc(sizeof(char) * (len + 1));
@@ -23,10 +23,10 @@ char *argstostr(int ac, char **av) {
         for (j = 0; av[i][j]; j++) {
             str[k++] = av[i][j];
         }
-        str[k++] = n;
+        str[k++] = '\n';  // Use single quotes to represent newline character
     }
 
-    str[k] = 0;
+    str[k] = '\0';
 
     return (str);
 }
