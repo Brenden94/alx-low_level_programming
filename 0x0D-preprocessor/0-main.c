@@ -1,18 +1,13 @@
-#include "0-object_like_macro.h"
-#include "0-object_like_macro.h"
 #include <stdio.h>
+#include "dog.h"
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    int s;
+    struct dog my_dog;
 
-    s = 98 + SIZE;
-    printf("%d\n", s);
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    printf("My name is %s, and I am %.1f :) - Woof!\\n", my_dog.name, my_dog.age);
     return (0);
 }
-
