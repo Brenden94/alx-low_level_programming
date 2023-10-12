@@ -2,18 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-/**
- * new_dog - creates a new dog structure
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
- *
- * Return: pointer to a new dog_t structure
- */
-dog_t *new_dog(char *name, float age, char *owner)
+struct dog *new_dog(char *name, float age, char *owner)
 {
     dog_t *new_dog = malloc(sizeof(dog_t));
-
     if (new_dog == NULL)
         return (NULL);
 
@@ -24,6 +15,8 @@ dog_t *new_dog(char *name, float age, char *owner)
         return (NULL);
     }
 
+    new_dog->age = age;
+
     new_dog->owner = strdup(owner);
     if (new_dog->owner == NULL)
     {
@@ -31,8 +24,6 @@ dog_t *new_dog(char *name, float age, char *owner)
         free(new_dog);
         return (NULL);
     }
-
-    new_dog->age = age;
 
     return (new_dog);
 }
