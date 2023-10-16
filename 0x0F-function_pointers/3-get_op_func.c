@@ -1,24 +1,28 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int (*get_op_func(char *s))(int, int) {
-  op_t ops[] = {
-    {"+", add},
-    {"-", sub},
-    {"*", mul},
-    {"/", divide},
-    {"%", mod},
-    {NULL, NULL}
-  };
-  int i = 0;
+int (*get_op_func(char *s))(int, int)
+{
+    op_t ops[] = {
+        {"+", add},
+        {"-", sub},
+        {"*", mul},
+        {"/", divide},
+        {"%", mod},
+        {NULL, NULL}
+    };
+    int i = 0;
 
-  while (ops[i].op) {
-    if (*s == *(ops[i].op)) {
-      return (ops[i].f);
+    while (ops[i].op)
+    {
+        if (*s == *(ops[i].op))
+        {
+            return (ops[i].f);
+        }
+        i++;
     }
-    i++;
-  }
 
-  printf("Error
-");
-  exit(99);
+    printf("Error\n");
+    exit(99);
 }
