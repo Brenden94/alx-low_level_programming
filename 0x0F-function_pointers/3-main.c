@@ -14,9 +14,16 @@ int main(int argc, char *argv[])
     char *operator = argv[2];
     int num2 = atoi(argv[3]);
 
-    int (*op_func)(int, int) = get_op_func(operator);
-    int result = op_func(num1, num2);
+    int (*op_func)(int, int);
+    op_func = get_op_func(operator);
 
+    if (op_func == NULL)
+    {
+        printf("Error\n");
+        return (99);
+    }
+
+    int result = op_func(num1, num2);
     printf("%d\n", result);
 
     return (0);
