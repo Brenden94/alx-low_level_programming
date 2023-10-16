@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     num1 = atoi(argv[1]);
     char *operator = argv[2];
     num2 = atoi(argv[3]);
+
     op_func = get_op_func(operator);
 
     if (op_func == NULL)
