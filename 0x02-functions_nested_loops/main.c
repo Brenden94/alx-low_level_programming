@@ -1,15 +1,12 @@
-#include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
-void some_main(const char *name);
-
-int main()
+int main(void)
 {
-    some_main("Hello, World\n");
-    return 0;
-}
+    int r;
 
-void some_main(const char *name)
-{
-    printf("%s", name);
+    r = print_last_digit(98);
+    _putchar(0 + r);
+    _putchar(n);
+    return (0);
 }
