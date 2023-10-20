@@ -1,24 +1,25 @@
-#include "main.h"
 #include <stdio.h>
+
+int is_prime_number(int n);
+
 int main(void)
 {
-    int r;
+    int n;
 
-    r = is_prime_number(1);
-    printf("%d\n", r);
-    r = is_prime_number(1024);
-    printf("%d\n", r);
-    r = is_prime_number(16);
-    printf("%d\n", r);
-    r = is_prime_number(17);
-    printf("%d\n", r);
-    r = is_prime_number(25);
-    printf("%d\n", r);
-    r = is_prime_number(-1);
-    printf("%d\n", r);
-    r = is_prime_number(113);
-    printf("%d\n", r);
-    r = is_prime_number(7919);
-    printf("%d\n", r);
+    n = 1;
+    printf("%d is prime: %d\n", n, is_prime_number(n));
+
+    n = 2;
+    printf("%d is prime: %d\n", n, is_prime_number(n));
+
+    n = 11;
+    printf("%d is prime: %d\n", n, is_prime_number(n));
+
+    n = 16;
+    printf("%d is prime: %d\n", n, is_prime_number(n));
+
+    n = 29;
+    printf("%d is prime: %d\n", n, is_prime_number(n));
+
     return (0);
 }
