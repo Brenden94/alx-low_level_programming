@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _putchar - Writes a character to stdout
  * @c: The character to write
@@ -9,15 +8,15 @@
 int _putchar(char c);
 
 /**
- * _sqrt_recusion - A function that does something with recursion
- * @s: Some parameter
+ * _sqrt_decision - Description of your function
+ * @s: The string to print
  */
-void _sqrt_recusion(char *s)
+void _sqrt_decision(char *s)
 {
     if (*s)
     {
         _putchar(*s);
-        _sqrt_recusion(s + 1);
+        _sqrt_decision(s + 1);
     }
 }
 
@@ -28,6 +27,6 @@ void _sqrt_recusion(char *s)
  */
 int main(void)
 {
-    _sqrt_recusion("This is a test.");
+    _sqrt_decision("First, solve the problem. Then, write the code");
     return (0);
 }
