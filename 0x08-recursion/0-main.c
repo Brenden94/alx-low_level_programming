@@ -22,11 +22,11 @@ void _sqrt_recusion(char *s)
 }
 
 /**
- * main - check the code for Holberton School students.
+ * _puts_main - New main function
  *
  * Return: Always 0.
  */
-int main(void)
+int _puts_main(void)
 {
     _sqrt_recusion("This is a test.");
     return (0);
