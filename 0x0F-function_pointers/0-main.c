@@ -1,36 +1,36 @@
 #include <stdio.h>
 #include "function_pointers.h"
+#include "print_name.h"
 
-void print_upper(char *str)
+void print_name_as_is(char *name)
 {
-    while (*str)
-    {
-        if (*str >= 'a' && *str <= 'z')
-            putchar(*str - 'a' + 'A');
-        else
-            putchar(*str);
-        str++;
-    }
+	printf("Hello, my name is %s\n", name);
 }
 
-void print_lower(char *str)
+void print_name_uppercase(char *name)
 {
-    while (*str)
-    {
-        if (*str >= 'A' && *str <= 'Z')
-            putchar(*str - 'A' + 'a');
-        else
-            putchar(*str);
-        str++;
-    }
+	unsigned int i;
+
+	printf("Hello, my uppercase name is ");
+	i = 0;
+	while (name[i])
+	{
+		if (name[i] >= 'a' && name[i] <= 'z')
+		{
+			putchar(name[i] + 'A' - 'a');
+		}
+		else
+		{
+			putchar(name[i]);
+		}
+		i++;
+	}
 }
 
-int main()
+int main(void)
 {
-
-    printf("Original: %s\n", name);
-    print_name(name, print_upper);
-    print_name(name, print_lower);
-
-    return (0);
+	print_name("Bob", print_name_as_is);
+	print_name("Bob Dylan", print_name_uppercase);
+	printf("\n");
+	return (0);
 }
