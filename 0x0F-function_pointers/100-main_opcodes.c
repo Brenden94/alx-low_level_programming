@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Entry point of the program.
+ * @argc: Number of command-line arguments.
+ * @argv: Array of command-line argument strings.
+ *
+ * Return: 0 on success, 1 for incorrect argument count, 2 for negative input.
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -18,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 
 	unsigned char *main_address = (unsigned char *)main;
-	int i; // Declare the loop variable outside the loop
+	int i;
 
 	for (i = 0; i < num_bytes; i++)
 	{
