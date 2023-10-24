@@ -18,8 +18,9 @@ int main(int argc, char *argv[])
 	}
 
 	unsigned char *main_address = (unsigned char *)main;
+	int i; // Declare the loop variable outside the loop
 
-	for (int i = 0; i < num_bytes; i++)
+	for (i = 0; i < num_bytes; i++)
 	{
 		printf("%02x", main_address[i]);
 		if (i < num_bytes - 1)
