@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char **strtow(char *str);
+char *_strdup(char *str);
 
 int main(void) {
-    char **av;
-    int i;
+    char *dup;
 
-    av = strtow("      Holberton School         #cisfun      ");
-    for (i = 0; av[i]; i++) {
-        printf("%s\n", av[i]);
-        free(av[i]);
+    dup = _strdup("Holberton School #cisfun");
+    if (dup != NULL) {
+        printf("%s\n", dup);
+        free(dup);
     }
-    free(av);
+
     return (0);
 }
+
