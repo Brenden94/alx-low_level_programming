@@ -1,2 +1,2 @@
 #include "main.h"
-char *_strcat(char *dest, char *src) { return dest; }
+char *_strcat(char *dest, char *src) { char *temp = dest; while (*dest) dest++; while ((*dest++ = *src++)); return temp; }

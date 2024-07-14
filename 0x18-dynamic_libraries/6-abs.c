@@ -1,2 +1,2 @@
 #include "main.h"
-int _abs(int n) { return 0; }
+int _abs(int n) { return n >= 0 ? n : -n; }
